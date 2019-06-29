@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity
     RecyclerView recyclerView;
     List<Checklist_Model> list;
     ChecklistAdapeter checklistAdapeter;
+    String services[]={"Product Replacement","Updated Version Configured","Quality checking","Acknowledgement"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -24,9 +25,9 @@ public class MainActivity extends AppCompatActivity
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         list=new ArrayList<>();
-        for (int i=0;i<10;i++)
+        for (int i=0;i<services.length;i++)
         {
-            Checklist_Model checklist_model=new Checklist_Model("Check"+i);
+            Checklist_Model checklist_model=new Checklist_Model(services[i]);
             list.add(checklist_model);
         }
         checklistAdapeter=new ChecklistAdapeter(this,list);

@@ -2,7 +2,7 @@ package com.example.task;
 
 public class Checklist_Model
 {
-    String name;
+    private String name;
 
     public Checklist_Model(String name) {
         this.name = name;
