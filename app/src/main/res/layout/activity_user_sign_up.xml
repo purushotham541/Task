@@ -1,0 +1,79 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+    <TextView
+        android:id="@+id/login_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Register"
+        android:textColor="@color/itemColor"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="15"
+            android:id="@+id/userid"
+            android:singleLine="true"
+            android:hint="User id"
+            android:inputType="text" />
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="15"
+            android:id="@+id/pwd"
+            android:singleLine="true"
+            android:hint="Password"
+            android:inputType="text" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="15"
+            android:id="@+id/cnfrmPwd"
+            android:singleLine="true"
+            android:hint="Confirm password"
+            android:inputType="text" />
+    </android.support.design.widget.TextInputLayout>
+
+
+
+
+    <Button
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="22dp"
+        android:background="@color/itemColor"
+        android:text="Register"
+        android:id="@+id/register"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="18sp" />
+
+
+
+
+
+
+
+</LinearLayout>

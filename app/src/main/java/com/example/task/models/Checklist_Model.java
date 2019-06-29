@@ -1,4 +1,4 @@
-package com.example.task;
+package com.example.task.models;
 
 public class Checklist_Model
 {
