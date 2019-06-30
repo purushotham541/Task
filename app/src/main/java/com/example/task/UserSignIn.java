@@ -15,14 +15,14 @@ import android.widget.Toast;
 
 import com.example.task.database.User;
 
-public class UserSignIn extends AppCompatActivity {
+public class UserSignIn extends AppCompatActivity
+{
     private static final String TAG = "UserSignIn";
     TextView register;
     Button login;
     EditText user_id,password;
     CheckBox sp;
     SQLiteDatabase db;
-   // UserRegister userRegister;
     Cursor cursor;
 
     @Override
@@ -32,51 +32,8 @@ public class UserSignIn extends AppCompatActivity {
         setContentView(R.layout.activity_user_sign_in);
         user_id=findViewById(R.id.login_userid);
         password=findViewById(R.id.login_pwd);
-       // sp=(CheckBox)findViewById(R.id.sp);
-        //userRegister=new UserRegister(this);
-      //  db=userRegister.getReadableDatabase();
         register=findViewById(R.id.reg);
         login=findViewById(R.id.signin);
-
-
-        /*sp.setOnCheckedChangeListener((new CompoundButton.OnCheckedChangeListener()
-        {
-
-            @Override
-            public void onCheckedChanged(CompoundButton button,
-                                         boolean isChecked)
-            {
-
-                // If it is checkec then show password else hide
-                // password
-                if (isChecked)
-                {
-
-                    sp.setText(R.string.hide_pwd);// change
-                    // checkbox
-                    // text
-
-                    password.setInputType(InputType.TYPE_CLASS_TEXT);
-                    password.setTransformationMethod(HideReturnsTransformationMethod
-                            .getInstance());// show password
-                } else
-
-                {
-                    sp.setText(R.string.show_pwd);// change
-                    // checkbox
-                    // text
-
-                    password.setInputType(InputType.TYPE_CLASS_TEXT
-                            | InputType.TYPE_TEXT_VARIATION_PASSWORD);
-                    password.setTransformationMethod(PasswordTransformationMethod
-                            .getInstance());// hide password
-
-                }
-
-            }
-        }));
-*/
-
 
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,14 +49,15 @@ public class UserSignIn extends AppCompatActivity {
             {
                 String User_id = user_id.getText().toString();
                 String pass = password.getText().toString();
-                Log.d(TAG, "onClick: "+User_id+"\n"+pass);
+                Log.d(TAG, "Validation check: "+User_id+" "+pass);
                 User user=new User(UserSignIn.this);
-                Boolean userIdPasswrd=user.emailpassword(User_id,pass);
-                if(userIdPasswrd==true)
+                int valid=user.Login(User_id,pass);
+                if(valid>0)
                 {
-                    Toast.makeText(getApplicationContext(),"Sucess",Toast.LENGTH_LONG).show();
-                    /*Intent i=new Intent(UserSignIn.this,MainActivity.class);
-                    startActivity(i);*/
+                    Log.d(TAG, "onClick: Login success");
+                    Toast.makeText(getApplicationContext(),"Login Sucess",Toast.LENGTH_LONG).show();
+                    Intent i=new Intent(UserSignIn.this,MainActivity.class);
+                    startActivity(i);
 
                 }
                 else

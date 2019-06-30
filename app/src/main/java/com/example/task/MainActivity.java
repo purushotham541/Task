@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity
     RecyclerView recyclerView;
     List<Checklist_Model> list;
     ChecklistAdapeter checklistAdapeter;
-    String services[]={"Product Replacement","Updated Version Configured","Quality checking","Acknowledgement"};
+    String[] services = {"Product Replacement", "Updated Version Configured", "Quality checking", "Acknowledgement"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
