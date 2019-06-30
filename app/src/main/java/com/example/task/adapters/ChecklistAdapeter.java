@@ -1,4 +1,4 @@
-package com.example.task;
+package com.example.task.adapters;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -15,13 +15,16 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.task.R;
 import com.example.task.database.User;
+import com.example.task.interfaces.OnItemCheckListener;
+import com.example.task.interfaces.OnItemClickListener;
 import com.example.task.models.Attachments_Model;
 import com.example.task.models.Checklist_Model;
 
 import java.util.List;
 
-class ChecklistAdapeter extends RecyclerView.Adapter<ChecklistAdapeter.ViewHolder>
+public class ChecklistAdapeter extends RecyclerView.Adapter<ChecklistAdapeter.ViewHolder>
 {
     private static final String TAG = "ChecklistAdapeter";
     private Context context;

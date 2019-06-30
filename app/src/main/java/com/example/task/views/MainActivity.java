@@ -1,10 +1,12 @@
-package com.example.task;
+package com.example.task.views;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.example.task.R;
+import com.example.task.adapters.ChecklistAdapeter;
 import com.example.task.models.Checklist_Model;
 
 import java.util.ArrayList;

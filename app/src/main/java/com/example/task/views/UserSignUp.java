@@ -1,6 +1,5 @@
-package com.example.task;
+package com.example.task.views;
 
-import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.task.R;
 import com.example.task.database.User;
 
 public class UserSignUp extends AppCompatActivity {

@@ -1,4 +1,4 @@
-package com.example.task;
+package com.example.task.interfaces;
 
 import android.view.View;
 

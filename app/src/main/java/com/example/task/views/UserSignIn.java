@@ -1,4 +1,4 @@
-package com.example.task;
+package com.example.task.views;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.task.R;
 import com.example.task.database.User;
 
 public class UserSignIn extends AppCompatActivity

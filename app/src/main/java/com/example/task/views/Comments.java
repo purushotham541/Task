@@ -1,4 +1,4 @@
-package com.example.task;
+package com.example.task.views;
 
 public class Comments
 {
